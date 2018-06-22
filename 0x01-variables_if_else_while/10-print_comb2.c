@@ -26,8 +26,11 @@ int main(void)
 			putchar(h);
 			if (x == '9' && h == '9')
 				putchar('\n');
-			putchar(',');
-			putchar(' ');
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
 			h++;
 		}
 
