@@ -25,7 +25,7 @@ int main(void)
 			putchar(x);
 			putchar(h);
 			if (x == '9' && h == '9')
-				putchar(10);
+				putchar('\n');
 			putchar(',');
 			putchar(' ');
 			h++;
