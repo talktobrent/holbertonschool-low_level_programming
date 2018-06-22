@@ -12,10 +12,8 @@
 int main(void)
 {
 	int x;
-	int h;
 
 	x = 48;
-	h = 48;
 
 	while (x < 58)
 		{
@@ -31,4 +29,3 @@ int main(void)
 
 	return (0);
 }
-
