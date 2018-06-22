@@ -22,24 +22,13 @@ int main(void)
 		putchar(x);
 		if (x == 57)
 			break;
-		else
-		{
 		putchar(44);
 		putchar(32);
 		x++;
-		}
 		}
 
 	putchar(10);
 
 	return (0);
 }
-
-
-
-
-
-
-
-
 
