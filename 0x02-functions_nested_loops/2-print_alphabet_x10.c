@@ -6,9 +6,9 @@
 * Void
 */
 
-void print_alphabet(void);
 
-{
+void print_alphabet_x10(void);
+
 int t = (0);
 
 		while (t < 10)
