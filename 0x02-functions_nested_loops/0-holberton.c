@@ -1,13 +1,14 @@
 #include "holberton.h"
 
-/**Prints 'Holberton' 
+/**
+* main - Prints 'Holberton'
 *using _putchar
 *
 *Return: Always 0 (Success)
 */
 
 int main(void)
-{	
+{
 	_putchar(72);
 	_putchar(111);
 	_putchar(108);
@@ -19,5 +20,5 @@ int main(void)
 	_putchar(110);
 	_putchar(10);
 
-	return(0);
+	return (0);
 }
