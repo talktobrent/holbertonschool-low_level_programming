@@ -3,7 +3,6 @@
 * jack_bauer - print every min
 *
 * Description: prints every min in 24 hours
-* Return: always 0
 */
 
 void jack_bauer(void)
