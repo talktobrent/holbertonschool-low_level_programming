@@ -1,16 +1,15 @@
-
+#include "holberton.h"
 /**
-* print_alphabet - prints
-*alphabet backwards
+* print_alphabet - prints zyx...
 *
-* Return
+* Description: prints alphabet backwards
 */
 
 void print_alphabet(void)
 {
-	int x = ('a'); 
-	{	
-		while(x <= 'z')
+	int x = ('a');
+	{
+		while (x <= 'z')
 		{
 		_putchar(x);
 		x++;
