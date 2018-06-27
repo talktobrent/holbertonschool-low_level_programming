@@ -1,30 +1,22 @@
 #include "holberton.h"
 /**
-* print_alphabet - prints
-*alphabet 10 times
+* print_alphabet_x10 - prints alphabet 10x
 *
-* Void
+* Description: prints full alphabet 10x on new line
 */
 
 
-void print_alphabet_x10(void);
+void print_alphabet_x10(void)
+{
+int t, x;
 
-int t = (0);
-
-		while (t < 10)
-		{
-			int x = ('a');
-
-			while (x <= 'z')
-			{
-			_putchar(x);
-			x++;
-			}
-			if (t < 9)
-			_putchar(10);
-
-		t++;
-		}
+for (t = 0; t < 9; t++)
+	{
+	for (x = ('a'); x <= 'z'; x++)
+		_putchar(x);
 
 	_putchar(10);
+	}
+
+
 }
