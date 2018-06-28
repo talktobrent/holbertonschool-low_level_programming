@@ -1,5 +1,5 @@
 /**
-* _mul - multiply
+* mul - multiply
 * @a: First operand
 * @b: Second operand
 *
@@ -9,7 +9,5 @@
 
 int mul(int a, int b)
 {
-	int ab = (a * b);
-
-	return (ab);
+	return (a * b);
 }
