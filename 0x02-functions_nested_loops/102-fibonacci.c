@@ -4,6 +4,7 @@
 * main - Prints fibonacci
 *
 * Description: Prints first 50 fibonacci numbers
+* Return: always zero
 */
 
 int main(void)
