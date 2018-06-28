@@ -10,8 +10,9 @@ void more_numbers(void)
 
 	for (line = 0; line < 10; line++)
 	{
-		for (fourteen = 1; fourteen < 15; fourteen++)
+		for (fourteen = 0; fourteen < 15; fourteen++)
 		{
+		if (fourteen > 9)
 		_putchar(fourteen / 10 + 48);
 		_putchar(fourteen % 10 + 48);
 		}
