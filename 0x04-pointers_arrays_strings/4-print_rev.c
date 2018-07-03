@@ -8,8 +8,9 @@
 void print_rev(char *str)
 {
 int count;
+count = 1;
 
-while (*str > 0)
+while (*str != 0)
 {
 	str = str + 1;
 	count++;
