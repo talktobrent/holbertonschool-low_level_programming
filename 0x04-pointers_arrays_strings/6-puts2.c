@@ -15,7 +15,7 @@ while (*str != 0)
 {
 	str = str + 1;
 
-	if ((count % 2) != 0)
+	if ((count % 2) != 0 && *str != 0)
 		_putchar(*str);
 
 	count++;
