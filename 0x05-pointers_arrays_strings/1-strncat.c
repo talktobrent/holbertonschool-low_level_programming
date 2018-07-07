@@ -2,7 +2,7 @@
 * _strncat - Concatenates two strings
 * @dest: string to be appended upon
 * @src: string to appended to dest
-* @n; bytes (length) from source to be copied
+* @n: bytes (length) from source to be copied
 * Description: Concatenates two strings, src up to n added to dest
 * Return: Pointer to dest
 */
