@@ -10,8 +10,11 @@ char *cap_string(char *s)
 int count;
 	for (count = 0; s[count] != 0; count++)
 	{
-		if (count > 0 && (s[count] > 96 && s[count] < 123))
+		if (s[count] > 96 && s[count] < 123)
 		{
+			if (count == 0)
+				s[0] = s[0] - 32;
+			else
 			switch (s[count - 1])
 			case 10:
 			case 32:
