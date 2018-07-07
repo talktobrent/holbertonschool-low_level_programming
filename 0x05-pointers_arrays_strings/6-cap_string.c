@@ -17,7 +17,7 @@ int count;
 			case 32:
 			case 9:
 			case ',':
-			case ':':
+			case ';':
 			case '.':
 			case '!':
 			case '?':
