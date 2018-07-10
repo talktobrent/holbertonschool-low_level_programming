@@ -17,9 +17,9 @@ for (count = 0; haystack[count] != 0; count++)
 	while (haystack[count + test] == needle[test])
 	{
 		test++;
-		if (needle[test] == 0)
+		if (needle[test] == 0 && haystack[count + test] == 32)
 			return (haystack + count);
 	}
 }
-return (haystack + count);
+return (0);
 }
