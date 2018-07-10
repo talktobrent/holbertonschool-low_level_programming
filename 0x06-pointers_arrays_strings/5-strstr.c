@@ -21,5 +21,5 @@ for (count = 0; haystack[count] != 0; count++)
 			return (haystack + count);
 	}
 }
-return (0);
+return (haystack + count);
 }
