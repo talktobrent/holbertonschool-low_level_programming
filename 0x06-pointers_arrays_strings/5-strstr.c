@@ -11,10 +11,9 @@ char *_strstr(char *haystack, char *needle)
 {
 unsigned int count, test;
 
-test = 0;
-
 for (count = 0; haystack[count] != 0; count++)
 {
+	test = 0;
 	while (haystack[count + test] == needle[test])
 	{
 		test++;
