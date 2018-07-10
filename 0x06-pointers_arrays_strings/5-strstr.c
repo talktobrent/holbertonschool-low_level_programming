@@ -11,15 +11,15 @@ char *_strstr(char *haystack, char *needle)
 {
 unsigned int count, test;
 
+test = 0;
+
 for (count = 0; haystack[count] != 0; count++)
 {
-	if (haystack[count] == needle[test])
+	while (haystack[count + test] == needle[test])
 	{
-		while (haystack[count + test] == needle[test])
-		{	test++;
-			if (needle[test] == 0)
-				return (haystack + count);
-		}
+		test++;
+		if (needle[test] == 0)
+			return (haystack + count);
 	}
 }
 return (0);
