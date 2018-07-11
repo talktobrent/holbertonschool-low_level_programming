@@ -11,6 +11,9 @@ char *_strstr(char *haystack, char *needle)
 {
 unsigned int count, test;
 
+if (needle[0] == 0)
+	return (haystack);
+
 for (count = 0; haystack[count] != 0; count++)
 {
 	test = 0;
