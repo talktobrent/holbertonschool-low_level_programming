@@ -1,4 +1,4 @@
-## Readme
+# Readme
 Read or watch What Is A “C” Library? What Is It Good For?, Creating A Static “C” Library Using “ar” and “ranlib”, Using A “C” Library In A Program , What is difference between Dynamic and Static library(Static and Dynamic linking) (stop at 4:44) and C static libraries.
 
 man ar, ranlib, nm.
@@ -42,7 +42,7 @@ The prototypes of all your functions and the prototype of the function _putchar 
 
 Don’t forget to push your header file
 
-# Requirements (Bash)
+## Requirements (Bash)
 Allowed editors: vi, vim, emacs
 
 All your scripts will be tested on Ubuntu 14.04 LTS
