@@ -6,7 +6,7 @@
 * @argc: amount of command line arguments passed
 * @argv: array of strings recording each command line argument
 * Description: prints minimum amount of coins exchanged for amount given
-* in argv* [1], coins are: 25, 10, 5, 2, 1
+* in argv[1], coins are: 25, 10, 5, 2, 1
 * Return: 1 if not enough arguments passed, 0 otherwise
 */
 
