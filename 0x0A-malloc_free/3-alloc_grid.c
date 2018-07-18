@@ -17,9 +17,11 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 
 	aryptr = malloc(sizeof(int *) * height);
-
 	if (aryptr == NULL)
+	{
+		free(aryptr);
 		return (NULL);
+	}
 
 	for (vert = 0; vert < height; vert++)
 	{
@@ -30,9 +32,7 @@ int **alloc_grid(int width, int height)
 			free(aryptr);
 			return (NULL);
 		}
-
 		aryptr[vert] = string;
-
 		for (horz = 0; horz < width; horz++)
 			aryptr[vert][horz] = 0;
 	}
