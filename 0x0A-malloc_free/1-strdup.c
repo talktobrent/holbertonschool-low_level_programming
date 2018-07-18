@@ -12,7 +12,7 @@ char *_strdup(char *str)
 	char *strptr;
 	int count;
 
-	if (str == 0)
+	if (str == NULL)
 		return (NULL);
 
 	for (count = 0; str[count] != '\0'; count++)
@@ -23,10 +23,10 @@ char *_strdup(char *str)
 	if (strptr == NULL)
 		return (NULL);
 
-	for (count = 0; str[count] != 0; count++)
+	for (count = 0; str[count] != '\0'; count++)
 		strptr[count] = str[count];
 
-	strptr[count] = 0;
+	strptr[count] = '\0';
 
 	return (strptr);
 }
