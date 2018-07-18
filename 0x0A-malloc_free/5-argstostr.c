@@ -30,7 +30,10 @@ char *argstostr(int ac, char **av)
 
 	args = malloc(sizeof(char) * x);
 	if (args == NULL)
+	{
+		free(args);
 		return (NULL);
+	}
 
 	x = 0;
 	for (place = 0; place < ac; place++)
@@ -43,7 +46,6 @@ char *argstostr(int ac, char **av)
 		args[x] = '\n';
 		x++;
 	}
-
 args[x] = '\0';
 return (args);
 }
