@@ -35,7 +35,9 @@ int **alloc_grid(int width, int height)
 		aryptr[vert] = string;
 		for (horz = 0; horz < width; horz++)
 			aryptr[vert][horz] = 0;
+
 	}
+	free(string);
 	return (aryptr);
 }
 
