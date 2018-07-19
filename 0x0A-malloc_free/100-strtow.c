@@ -23,7 +23,7 @@ if (*str == '\0' || str == NULL)
 
 	for (count = 0; str[count] != 0; count++)
 	{
-		if (str[count] != ' ' && str[count + 1] == ' ' || str[count] == '\0')
+		if (str[count] != ' ' && (str[count + 1] == '\0' || str[count + 1] != ' '))
 			word++;
 	}
 
@@ -78,4 +78,3 @@ if (*str == '\0' || str == NULL)
 	}
 	return (array);
 }
-
