@@ -19,14 +19,14 @@ count = 0;
 if (min > max)
 	return (NULL);
 
-	array = malloc(sizeof(int) * (max - min));
+	array = malloc(sizeof(int) * (max - min + 1));
 	if (array == NULL)
 	{
 		free(array);
 		return (NULL);
 	}
 
-	while (count < max - min)
+	while (count <= max - min)
 	{
 		array[count] = min + count;
 		count++;
