@@ -25,7 +25,7 @@ if (nmemb == 0 || size == 0)
 		return (NULL);
 	}
 
-	while (count < nmemb)
+	while (count < nmemb * size)
 	{
 		array[count] = 0;
 		count++;
