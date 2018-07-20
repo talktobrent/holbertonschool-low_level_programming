@@ -9,9 +9,11 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-int *array;
+char *array;
 unsigned int count;
 void *ptr;
+
+count = 0;
 
 if (nmemb == 0 || size == 0)
 	return (NULL);
