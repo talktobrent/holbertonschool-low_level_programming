@@ -19,7 +19,7 @@ printf("Name: ");
 		printf("%s\n", d->name);
 
 printf("Age: ");
-	if (d->age == 0)
+	if (d->age < 0)
 		printf("(nil)\n");
 	else
 		printf("%f\n", d->age);
