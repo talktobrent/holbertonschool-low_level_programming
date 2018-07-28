@@ -11,11 +11,14 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	unsigned int count, failtest, test, emptytest;
+	unsigned int count, fail, test, catch;
 	char *x;
 
 	count = 0;
-	failtest = 0;
+	fail = 0;
+
+	if (format == NULL)
+		return;
 
 	va_start(args, format);
 
@@ -45,15 +48,13 @@ void print_all(const char * const format, ...)
 				printf("%s", x);
 				break;
 			default:
-				failtest++;
+				fail++;
 				break;
 		}
-	count++;
-	if (failtest == 0)
-	{
+		count++;
 		test = 0;
-		emptytest = 0;
-		while (format[count + test] != 0 && emptytest == 0)
+		catch = 0;
+		while (fail == 0 && format[count + test] != 0 && catch == 0)
 		{
 			switch (format[count + test])
 			{
@@ -62,7 +63,7 @@ void print_all(const char * const format, ...)
 				case 'f':
 				case 's':
 					printf(", ");
-					emptytest++;
+					catch++;
 					break;
 				default:
 					break;
@@ -70,8 +71,8 @@ void print_all(const char * const format, ...)
 		test++;
 		}
 	}
-	failtest = 0;
-	}
+	fail = 0;
+
 
 	printf("\n");
 	va_end(args);
