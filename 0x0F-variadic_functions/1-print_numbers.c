@@ -4,6 +4,7 @@
 
 /**
 * print_numbers - prints any numbers given
+* @n: amount of arguments passed
 * @separator: char string used to separate output between numbers
 */
 
