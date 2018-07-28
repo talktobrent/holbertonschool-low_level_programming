@@ -11,7 +11,8 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	unsigned int count, failtest, test;
+	unsigned int count, failtest, test, emptytest;
+	char *x;
 
 	count = 0;
 	failtest = 0;
@@ -35,7 +36,13 @@ void print_all(const char * const format, ...)
 				break;
 
 			case 's':
-				printf("%s", va_arg(args, char *));
+				x = va_arg(args, char *);
+				if (x == NULL)
+				{
+					printf("(nil)");
+						break;
+				}
+				printf("%s", x);
 				break;
 			default:
 				failtest++;
@@ -45,7 +52,8 @@ void print_all(const char * const format, ...)
 	if (failtest == 0)
 	{
 		test = 0;
-		while (format[count + test] != 0)
+		emptytest = 0;
+		while (format[count + test] != 0 && emptytest == 0)
 		{
 			switch (format[count + test])
 			{
@@ -54,13 +62,11 @@ void print_all(const char * const format, ...)
 				case 'f':
 				case 's':
 					printf(", ");
-					failtest++;
+					emptytest++;
 					break;
 				default:
 					break;
 			}
-		if (failtest > 0)
-			break;
 		test++;
 		}
 	}
