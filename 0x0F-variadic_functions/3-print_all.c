@@ -14,15 +14,14 @@ void print_all(const char * const format, ...)
 	unsigned int count, fail, test, catch;
 	char *x;
 
+	x = NULL;
+
 	count = 0;
 	fail = 0;
 
-	if (format == NULL)
-		return;
-
 	va_start(args, format);
 
-	while (format[count] != 0)
+	while (format && format[count] != 0)
 	{
 		switch (format[count])
 		{
@@ -54,6 +53,7 @@ void print_all(const char * const format, ...)
 		count++;
 		test = 0;
 		catch = 0;
+		/* tests if rest arguments fail, to see if ', ' should not be printed */
 		while (fail == 0 && format[count + test] != 0 && catch == 0)
 		{
 			switch (format[count + test])
