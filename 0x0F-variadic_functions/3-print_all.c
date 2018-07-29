@@ -70,8 +70,8 @@ void print_all(const char * const format, ...)
 			}
 		test++;
 		}
-	}
 	fail = 0;
+	}
 
 
 	printf("\n");
