@@ -10,10 +10,15 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t count;
-	listint_t *mover;
+	const listint_t *mover;
 
 	mover = NULL;
 	count = 0;
+
+	if (h == NULL)
+		return (0);
+
+	mover = h;
 
 	while (mover != NULL)
 	{
