@@ -27,7 +27,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/* finds location to insert new node */
 	while (count < idx)
 	{
-		if (mover->next == NULL)
+		if (mover->next == NULL && count < idx - 1)
 			return (NULL);
 
 		/* holds last location */
