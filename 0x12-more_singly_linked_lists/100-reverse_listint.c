@@ -20,9 +20,16 @@ listint_t *reverse_listint(listint_t **head)
 
 	while ((*head)->next != NULL)
 	{
+		/* preserve head->next */
 		forward = (*head)->next;
+
+		/* make head->next point backwards */
 		(*head)->next = last;
+
+		/* move last forward one node */
 		last = *head;
+
+		/* move head forward using preserved 'forward' */
 		*head = forward;
 	}
 
