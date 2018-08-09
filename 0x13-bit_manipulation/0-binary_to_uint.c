@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "holberton.h"
 
-/*
+/**
  * binary_to_uint - converts a binary number to unsigned int
  * @b: string given
  * Return: converted unsigned int
