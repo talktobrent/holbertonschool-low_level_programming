@@ -4,7 +4,7 @@
 /**
  * binary_to_uint - converts a binary number to unsigned int
  * @b: string given
- * Return: converted unsigned int
+ * Return: converted unsigned int, 0 if fails
  */
 
 
