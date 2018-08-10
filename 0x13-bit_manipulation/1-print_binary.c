@@ -27,13 +27,13 @@ void print_binary(unsigned long int n)
 	}
 	pow = 1;
 
-	while (n >= pow && count <= 64)
+	while (n >= pow && count < 64)
 	{
 		pow = pow + pow;
 		count++;
 	}
 
-	if (count == 64)
+	if (count == 63)
 		pow = ULONG_MAX;
 
 	pow = pow >> 1;
