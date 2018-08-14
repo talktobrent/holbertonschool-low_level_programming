@@ -26,19 +26,25 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
+	{
 		close(file);
 		return (0);
+	}
 
 	readcheck = read(file, buffer, letters);
 	close(file);
 	if (readcheck == -1)
+	{
 		free(buffer);
 		return (0);
+	}
 
 	writecheck = write(STDOUT_FILENO, buffer, readcheck);
 	if (writecheck != readcheck || writecheck == -1)
+	{
 		free(buffer);
 		return (0);
+	}
 
 	free(buffer);
 	return (writecheck);
