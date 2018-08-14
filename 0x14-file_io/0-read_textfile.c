@@ -34,10 +34,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buffer);
 		return (0);
 
-	buffer[readcheck] = 0;
-
 	writecheck = write(STDOUT_FILENO, buffer, readcheck);
-	if (writecheck != readcheck)
+	if (writecheck != readcheck || writecheck == -1)
 		free(buffer);
 		return (0);
 
