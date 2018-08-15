@@ -39,8 +39,11 @@ int main(int argc, char *argv[])
 		while (readcheck == 1024 && writecheck != -1)
 		{
 			readcheck = read(from, buffer, 1024);
-			to = open(argv[2], O_RDWR | O_APPEND);
-			writecheck = write(to, buffer, readcheck);
+			if (readcheck > 0)
+			{
+				to = open(argv[2], O_RDWR | O_APPEND);
+				writecheck = write(to, buffer, readcheck);
+			}
 		}
 	}
 
