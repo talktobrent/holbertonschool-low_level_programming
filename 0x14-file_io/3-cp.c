@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	to = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
+	to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
 	from = open(argv[1], O_RDONLY);
 
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 			readcheck = read(from, buffer, 1024);
 			if (readcheck > 0)
 			{
-				to = open(argv[2], O_RDWR | O_APPEND);
+				to = open(argv[2], O_WRONLY | O_APPEND);
 				if (to != -1)
 					writecheck = write(to, buffer, readcheck);
 			}
