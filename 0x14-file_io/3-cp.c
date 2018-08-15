@@ -46,13 +46,13 @@ int main(int argc, char *argv[])
 
 	free(buffer);
 
-	if (from == -1 || buffer == NULL || readcheck == -1)
+	if (from == -1 || readcheck == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
-	if (to == -1 || writecheck == -1)
+	if (to == -1 || buffer == NULL || writecheck == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
