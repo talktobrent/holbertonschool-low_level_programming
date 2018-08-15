@@ -33,16 +33,17 @@ int main(int argc, char *argv[])
 	if (from > 0 && buffer != NULL && to > 0)
 	{
 		readcheck = read(from, buffer, 1024);
-		if (readcheck != -1)
+		if (readcheck > 0)
 			writecheck = write(to, buffer, readcheck);
 
-		while (readcheck == 1024 && writecheck != -1)
+		while (readcheck == 1024 && writecheck != -1 && to != -1)
 		{
 			readcheck = read(from, buffer, 1024);
 			if (readcheck > 0)
 			{
 				to = open(argv[2], O_RDWR | O_APPEND);
-				writecheck = write(to, buffer, readcheck);
+				if (to != -1)
+					writecheck = write(to, buffer, readcheck);
 			}
 		}
 	}
@@ -74,6 +75,5 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[2]);
 		exit(100);
 	}
-
 	return (0);
 }
