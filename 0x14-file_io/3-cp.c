@@ -65,14 +65,14 @@ int main(int argc, char *argv[])
 	test = close(from);
 	if (test == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", from);
 		exit(100);
 	}
 
 	test = close(to);
 	if (test == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", to);
 		exit(100);
 	}
 	return (0);
