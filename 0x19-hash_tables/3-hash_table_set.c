@@ -35,6 +35,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * @index: index in hash table array
  * @key: new key
  * @value: new value
+ * Return: 1 on success, 0 if failure
  */
 
 int newnode(hash_node_t **index, const char *key, const char *value)
@@ -51,7 +52,7 @@ int newnode(hash_node_t **index, const char *key, const char *value)
 	if (new->value == NULL)
 	{
 		free(new);
-		return(0);
+		return (0);
 	}
 
 	new->key = strdup(key);
@@ -68,6 +69,7 @@ int newnode(hash_node_t **index, const char *key, const char *value)
 
 /**
  * collide - looks for duplicate key entry
+ * @run: head of linked list
  * @key: key given
  * @value: value given
  * Return: 0 if malloc fail, 1 if duplicate found, -1 if no duplicate
