@@ -43,5 +43,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
 void hash_table_delete(hash_table_t *ht);
+int collide(hash_node_t *run, const char *key, const char *value);
+int newnode(hash_node_t **index, const char *key, const char *value);
 
 #endif /* _SAMPLE_HEADER_H_ */
