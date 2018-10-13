@@ -3,6 +3,7 @@
 /**
  * shash_table_create - creates a hash table
  * @size: size to build
+ * Return: pointer to new hash table, NULL if fail
  */
 
 shash_table_t *shash_table_create(unsigned long int size)
@@ -26,6 +27,14 @@ shash_table_t *shash_table_create(unsigned long int size)
 	return (hashtable);
 }
 
+/**
+ * shash_table_set - adds node to sorted hash table
+ * @ht: sorted hash table to use
+ * @key: key given (string)
+ * @value: value associated with key
+ * Return: 1 if success, 0 if failure
+ */
+
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
@@ -44,7 +53,14 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	}
 	return (snewnode(&ht, index, key, value));
 }
-
+/**
+ * snewnode - adds a new node at a index
+ * @ht: sorted hash table to use
+ * @index: index in sorted hash table array
+ * @key: new key
+ * @value: new value
+ * Return: 1 on success, 0 if failure
+ */
 
 int snewnode(shash_table_t **ht, unsigned long int index, const char *key,
 		const char *value)
@@ -95,6 +111,14 @@ int snewnode(shash_table_t **ht, unsigned long int index, const char *key,
 	return (1);
 }
 
+/**
+ * scollide - looks for duplicate key entry
+ * @run: head of linked list
+ * @key: key given
+ * @value: value given
+ * Return: 0 if malloc fail, 1 if duplicate found, -1 if no duplicate
+ */
+
 int scollide(shash_node_t *run, const char *key, const char *value)
 {
 	char *temp = NULL;
@@ -122,6 +146,13 @@ int scollide(shash_node_t *run, const char *key, const char *value)
 	return (-1);
 }
 
+/**
+ * shash_table_get - gets a value at a key in sorted hash table
+ * @ht: sorted hash tbale given
+ * @key: key given (string)
+ * Return: value at key (string)
+ */
+
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 	if (ht == NULL || key == NULL || ht->shead == NULL)
@@ -137,7 +168,10 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 
 	return (NULL);
 }
-
+/**
+ * shash_table_print - prints a sorted hash table
+ * @ht: hash table given
+ */
 
 void shash_table_print(const shash_table_t *ht)
 {
@@ -154,6 +188,11 @@ void shash_table_print(const shash_table_t *ht)
 	printf("}\n");
 }
 
+/**
+ * shash_table_print - prints a sorted hash table in reverse
+ * @ht: sorted hash table given
+ */
+
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *run = ht->stail;
@@ -168,6 +207,11 @@ void shash_table_print_rev(const shash_table_t *ht)
 	}
 	printf("}\n");
 }
+
+/**
+ * shash_table_delete - deletes a sorted hash table
+ * @ht: sorted hash table given
+ */
 
 void shash_table_delete(shash_table_t *ht)
 {
