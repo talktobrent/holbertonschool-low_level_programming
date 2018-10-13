@@ -189,7 +189,7 @@ void shash_table_print(const shash_table_t *ht)
 }
 
 /**
- * shash_table_print - prints a sorted hash table in reverse
+ * shash_table_print_rev - prints a sorted hash table in reverse
  * @ht: sorted hash table given
  */
 
