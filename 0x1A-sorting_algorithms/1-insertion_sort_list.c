@@ -9,6 +9,9 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *infront = NULL, *inback = NULL, *mover = *list;
 
+	if (*list == NULL)
+		return;
+
 	while (mover->next != NULL)
 	{
 		while (mover->next != NULL && mover->next->n >= mover->n)
