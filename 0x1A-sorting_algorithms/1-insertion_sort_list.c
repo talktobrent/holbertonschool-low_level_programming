@@ -7,17 +7,17 @@
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *infront = NULL, *inback = NULL, *mover = *list;
+	listint_t *infront = NULL, *current = NULL, *inback = NULL, *mover = *list;
 
 	if (*list == NULL)
 		return;
 
 	while (mover->next != NULL)
 	{
-		while (mover->next != NULL && mover->next->n >= mover->n)
-			mover = mover->next;
-		if (mover->next != NULL)
+		if (mover->next->n < mover->n)
 		{
+			if (current == NULL)
+				current = mover;
 			infront = mover->next;
 			inback = mover->prev;
 
@@ -42,7 +42,12 @@ void insertion_sort_list(listint_t **list)
 				mover = infront;
 			print_list(*list);
 		}
+		else if (current != NULL)
+		{
+			mover = current;
+			current = NULL;
+		}
 		else
-			break;
+			mover = mover->next;
 	}
 }
