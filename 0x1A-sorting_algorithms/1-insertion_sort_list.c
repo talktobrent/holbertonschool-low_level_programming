@@ -7,15 +7,12 @@
 
 void insertion_sort_list(listint_t **list)
 {
-	int count = 0;
 	listint_t *infront = NULL, *inback = NULL, *mover = *list;
 
 	while (mover->next != NULL)
 	{
-		count++;
 		while (mover->next != NULL && mover->next->n >= mover->n)
 			mover = mover->next;
-		count++;
 		if (mover->next != NULL)
 		{
 			infront = mover->next;
