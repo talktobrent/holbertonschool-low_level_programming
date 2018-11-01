@@ -10,6 +10,8 @@ void part(int *array, size_t lo, size_t hi, size_t size);
 
 void quick_sort(int *array, size_t size)
 {
+	if (array == NULL || size < 2)
+		return;
 	part(array, 0, size - 1, size);
 }
 
