@@ -14,7 +14,7 @@ void shell_sort(int *array, size_t size)
 {
 	size_t test = 0, reach;
 
-	if (size < 2)
+	if (array == NULL || size < 2)
 		return;
 
 	while (test < size)
@@ -45,7 +45,6 @@ void shell(int *array, size_t reach, size_t size)
 				temp = array[reach];
 				array[reach] = array[lo];
 				array[lo] = temp;
-				print_array(array, size);
 
 				if (lo >= inc)
 				{
@@ -74,6 +73,7 @@ void shell(int *array, size_t reach, size_t size)
 		lo = low;
 
 	}
+	print_array(array, size);
 	if (next > 0)
 		shell(array, next, size);
 }
