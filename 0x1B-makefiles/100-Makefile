@@ -6,9 +6,9 @@ CC=gcc
 .PHONY: all re oclean fclean clean
 all: $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
-re: $(SRC) oclean all ; 
 oclean: 
 	$(RM) $(OBJ)
-fclean: clean, oclean ;
 clean:
 	$(RM) $(NAME) *~
+fclean: clean, oclean ;
+re: $(SRC) oclean all ; 
