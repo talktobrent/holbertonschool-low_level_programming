@@ -7,11 +7,11 @@
 * Return: 1 if perfect, 0 if not
 */
 
-int binary_tree_is_perfect_help(const binary_tree_t *tree);
+size_t binary_tree_is_perfect_help(const binary_tree_t *tree);
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	if (tree == NULL)
+	if (tree == NULL || tree->right == NULL || tree->left == NULL)
 		return (0);
 	if (binary_tree_is_perfect_help(tree) == 0)
 		return (1);
@@ -25,10 +25,10 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 * Return: 0 if perfect, any other number if not
 */
 
-int binary_tree_is_perfect_help(const binary_tree_t *tree)
+size_t binary_tree_is_perfect_help(const binary_tree_t *tree)
 {
 	if (tree->left != NULL && tree->right != NULL)
-		return ((1 + binary_tree_is_perfect_help(tree->left)) - \
+		return ((1 + binary_tree_is_perfect_help(tree->left)) -
 			(1 + binary_tree_is_perfect_help(tree->right)));
 	if (tree->left == NULL && tree->right == NULL)
 		return (1);
