@@ -11,8 +11,10 @@ size_t binary_tree_is_full_help(const binary_tree_t *tree);
 
 int binary_tree_is_full(const binary_tree_t *tree)
 {
-	if (tree == NULL || tree->left == NULL || tree->right == NULL)
+	if (tree == NULL)
 		return (0);
+	if (tree->right == NULL && tree->left == NULL)
+		return (1);
 	if (binary_tree_is_full_help(tree) == 0)
 		return (1);
 	return (0);
