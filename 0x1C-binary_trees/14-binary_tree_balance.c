@@ -28,6 +28,6 @@ int binary_tree_balance_help(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (-1);
-	return ((1 + binary_tree_balance_help(tree->left)) - \
-			(1 + binary_tree_balance_help(tree->right)));
+	return ((1 + binary_tree_balance_help(tree->left)) -
+		(1 + binary_tree_balance_help(tree->right)));
 }
