@@ -1,8 +1,10 @@
 #include "binary_trees.h"
 
-/*
+/**
 * binary_tree_height - finds height at given tree
 * @tree: pointer to root of binary tree
+* Description: finds height by comparing depth of left and right
+* Return: greater height between right and left
 */
 
 size_t binary_tree_height(const binary_tree_t *tree)

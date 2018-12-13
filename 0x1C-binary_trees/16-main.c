@@ -25,6 +25,7 @@ int main(void)
     printf("Perfect: %d\n\n", perfect);
 
     root->right->right->left = binary_tree_node(root->right->right, 10);
+    root->left->left->right = binary_tree_node(root->left->left, 10);
     binary_tree_print(root);
     perfect = binary_tree_is_perfect(root);
     printf("Perfect: %d\n\n", perfect);
