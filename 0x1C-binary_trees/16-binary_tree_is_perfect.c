@@ -11,8 +11,10 @@ size_t binary_tree_is_perfect_help(const binary_tree_t *tree);
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	if (tree == NULL || tree->right == NULL || tree->left == NULL)
+	if (tree == NULL)
 		return (0);
+	if (tree->right == NULL && tree->left == NULL)
+		return (1);
 	if (binary_tree_is_perfect_help(tree) == 0)
 		return (1);
 	return (0);
