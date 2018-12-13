@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+#include <stdio.h>
 
 /**
 * binary_tree_balance - finds balance factor at given tree
@@ -7,13 +8,17 @@
 * Return: 0 if tree is NULL, integer balance otherwise
 */
 
-int binary_tree_balance_help(const binary_tree_t *tree);
+size_t binary_tree_balance_help(const binary_tree_t *tree);
 
 int binary_tree_balance(const binary_tree_t *tree)
 {
+	size_t right, left;
+
 	if (tree == NULL)
 		return (0);
-	return (binary_tree_balance_help(tree));
+	left = binary_tree_balance_help(tree->left);
+	right = binary_tree_balance_help(tree->right);
+	return (left - right);
 }
 
 /**
@@ -24,10 +29,15 @@ int binary_tree_balance(const binary_tree_t *tree)
  * Return: integer difference from left and right
  */
 
-int binary_tree_balance_help(const binary_tree_t *tree)
+size_t binary_tree_balance_help(const binary_tree_t *tree)
 {
+	size_t left, right;
+
 	if (tree == NULL)
-		return (-1);
-	return ((1 + binary_tree_balance_help(tree->left)) -
-		(1 + binary_tree_balance_help(tree->right)));
+		return (0);
+	left = 1 + binary_tree_balance_help(tree->left);
+	right = 1 + binary_tree_balance_help(tree->right);
+	if (left > right)
+		return (left);
+	return (right);
 }
