@@ -79,15 +79,12 @@ long int binary_tree_is_bst_right(const binary_tree_t *tree)
 {
 	long int left = EMPTY, right = EMPTY;
 
-	printf("inhere %i\n", tree->n);
-
 	if (tree->right == NULL && tree->left == NULL)
 		return (tree->n);
 	if (tree->left)
 		left = binary_tree_is_bst_right(tree->left);
 	if (tree->right)
 		right = binary_tree_is_bst_right(tree->right);
-	printf("im %i left is %li right is %li\n", tree->n, left, right);
 	if (right == BAD || left == BAD)
 		return (BAD);
 	if (!tree->left)
