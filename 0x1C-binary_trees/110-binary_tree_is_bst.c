@@ -46,7 +46,7 @@ long int binary_tree_is_bst_left(const binary_tree_t *tree)
 		return (right);
 	if (!tree->right)
 		return (left);
-	if (left < tree->n && tree->n < right)
+	if (left != right && (left < tree->n && tree->n < right))
 		return (right);
 	return (1 + (long int)INT_MAX);
 }
@@ -72,7 +72,7 @@ long int binary_tree_is_bst_right(const binary_tree_t *tree)
 		return (right);
 	if (!tree->right)
 		return (left);
-	if (left < tree->n && tree->n < right)
+	if (left != right && (left < tree->n && tree->n < right))
 		return (left);
 	return (1 + (long int)INT_MAX);
 }
