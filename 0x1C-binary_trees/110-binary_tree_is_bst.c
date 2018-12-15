@@ -22,7 +22,9 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 	right = binary_tree_is_bst_right(tree->right);
 	if (left == right || (left > INT_MAX || right > INT_MAX))
 		return (0);
-	return (left < tree->n && tree->n < right);
+	if ((tree->left->n < tree->n) && (tree->n < tree->right->n))
+		return (left < tree->n && tree->n < right);
+	return (0);
 }
 
 /**
