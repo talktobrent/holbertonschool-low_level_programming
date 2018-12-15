@@ -18,10 +18,13 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 		return (0);
 	if (tree->right == NULL || tree->left == NULL)
 		return (0);
+
 	left = binary_tree_is_bst_left(tree->left);
 	right = binary_tree_is_bst_right(tree->right);
+
 	if (left == right || (left > INT_MAX || right > INT_MAX))
 		return (0);
+
 	if ((tree->left->n < tree->n) && (tree->n < tree->right->n))
 		return (left < tree->n && tree->n < right);
 	return (0);
@@ -45,9 +48,17 @@ long int binary_tree_is_bst_left(const binary_tree_t *tree)
 	if (tree->right)
 		right = binary_tree_is_bst_left(tree->right);
 	if (!tree->left)
+	{
+		if (right <= tree->n)
+			return (1 + (long int)INT_MAX);
 		return (right);
+	}
 	if (!tree->right)
+	{
+		if (left >= tree->n)
+			return (1 + (long int)INT_MAX);
 		return (left);
+	}
 	if (left != right && (left < tree->n && tree->n < right))
 		return (right);
 	return (1 + (long int)INT_MAX);
@@ -71,9 +82,17 @@ long int binary_tree_is_bst_right(const binary_tree_t *tree)
 	if (tree->right)
 		right = binary_tree_is_bst_right(tree->right);
 	if (!tree->left)
+	{
+		if (right <= tree->n)
+			return (1 + (long int)INT_MAX);
 		return (right);
+	}
 	if (!tree->right)
+	{
+		if (left >= tree->n)
+			return (1 + (long int)INT_MAX);
 		return (left);
+	}
 	if (left != right && (left < tree->n && tree->n < right))
 		return (left);
 	return (1 + (long int)INT_MAX);
