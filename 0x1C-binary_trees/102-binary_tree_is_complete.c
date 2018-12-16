@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
-long int binary_tree_is_complete_help(const binary_tree_t
-		*tree, long int level);
+long long int binary_tree_is_complete_help(const binary_tree_t
+		*tree, long long int level);
 
 /**
  * binary_tree_is_complete - finds if binary tree is complete
@@ -25,10 +25,10 @@ int binary_tree_is_complete(const binary_tree_t *tree)
  * leaves in a true complete tree, or 0 if untrue
  */
 
-long int binary_tree_is_complete_help(const binary_tree_t
-		*tree, long int level)
+long long int binary_tree_is_complete_help(const binary_tree_t
+		*tree, long long int level)
 {
-	long int null_level_left, null_level_right;
+	long long int null_level_left, null_level_right;
 
 	if (tree == NULL)
 		return (level);
