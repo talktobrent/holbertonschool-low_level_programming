@@ -13,7 +13,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
-	return (binary_tree_is_complete_help(tree, 1) != -1);
+	return (binary_tree_is_complete_help(tree, 0) != 0);
 }
 
 /**
@@ -22,7 +22,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
  * @level: tracks level of recursion to compare where nodes are null, 'flips'
  * to negative after left is one deeper than right
  * Return: the level (flipped to negative if tree is not perfect) of deepest
- * leaves in a true complete tree, -1 if untrue
+ * leaves in a true complete tree, or 0 if untrue
  */
 
 long int binary_tree_is_complete_help(const binary_tree_t
@@ -36,15 +36,15 @@ long int binary_tree_is_complete_help(const binary_tree_t
 	null_level_left = binary_tree_is_complete_help(tree->left, level + 1);
 	null_level_right = binary_tree_is_complete_help(tree->right, level + 1);
 
-	if (null_level_left == -1 ||  null_level_right == -1)
-		return (-1);
+	if (null_level_left == 0 ||  null_level_right == 0)
+		return (0);
 
 	if (null_level_left < 0)
 	{
 		if (-1 * null_level_right == null_level_left)
 			return (null_level_left);
 		else
-			return (-1);
+			return (0);
 	}
 
 	if (null_level_left == labs(null_level_right) + 1)
@@ -53,5 +53,5 @@ long int binary_tree_is_complete_help(const binary_tree_t
 	if (null_level_left == labs(null_level_right))
 		return (null_level_left);
 
-	return (-1);
+	return (0);
 }
