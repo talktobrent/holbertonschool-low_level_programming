@@ -36,21 +36,13 @@ long int binary_tree_is_complete_help(const binary_tree_t
 	null_level_left = binary_tree_is_complete_help(tree->left, level + 1);
 	null_level_right = binary_tree_is_complete_help(tree->right, level + 1);
 
-	if (null_level_left == 0 ||  null_level_right == 0)
+	if (null_level_left == 0 || null_level_right == 0)
 		return (0);
-
-	if (null_level_left < 0)
-	{
-		if (-1 * null_level_right == null_level_left)
-			return (null_level_left);
-		else
-			return (0);
-	}
 
 	if (null_level_left == labs(null_level_right) + 1)
 		return (-1 * null_level_right);
 
-	if (null_level_left == labs(null_level_right))
+	if (labs(null_level_left) == null_level_right)
 		return (null_level_left);
 
 	return (0);
