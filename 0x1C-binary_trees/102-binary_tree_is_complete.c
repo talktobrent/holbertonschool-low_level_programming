@@ -40,7 +40,7 @@ long int binary_tree_is_complete_help(const binary_tree_t
 		return (0);
 
 	if (null_level_left == labs(null_level_right) + 1)
-		return (-1 * null_level_right);
+		return (-1 * labs(null_level_right));
 
 	if (labs(null_level_left) == null_level_right)
 		return (null_level_left);
