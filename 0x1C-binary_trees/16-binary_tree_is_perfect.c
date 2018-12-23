@@ -1,38 +1,45 @@
 #include "binary_trees.h"
 
+long int binary_tree_is_perfect_help(const binary_tree_t *tree);
+
 /**
 * binary_tree_is_perfect - finds if given tree is perfect
 * @tree: pointer to root of binary tree
-* Description: splits with helper
+* Description: uses helper
 * Return: 1 if perfect, 0 if not
 */
 
-size_t binary_tree_is_perfect_help(const binary_tree_t *tree);
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
-	if (tree->right == NULL && tree->left == NULL)
-		return (1);
-	if (binary_tree_is_perfect_help(tree) == 0)
-		return (1);
-	return (0);
+	return (binary_tree_is_perfect_help(tree) != -1);
 }
 
 /**
-* binary_tree_is_perfect_help - helps binary_tree_is_perfect
+* binary_tree_is_perfect_help - finds if given tree is perfect
 * @tree: pointer to root of binary tree
-* Description: 'scores' each node and subtracts to compare both sides of tree
-* Return: 0 if perfect, any other number if not
+* Description: compares if left and right equal, and adds depth if so
+* Return: depth of perfect tree, -1 if not perfect
 */
 
-size_t binary_tree_is_perfect_help(const binary_tree_t *tree)
+long int binary_tree_is_perfect_help(const binary_tree_t *tree)
 {
-	if (tree->left != NULL && tree->right != NULL)
-		return ((1 + binary_tree_is_perfect_help(tree->left)) -
-			(1 + binary_tree_is_perfect_help(tree->right)));
-	if (tree->left == NULL && tree->right == NULL)
-		return (1);
-	return (3);
+	long int left = 0, right = 0;
+
+	if (tree == NULL)
+		return (0);
+
+	left = binary_tree_is_perfect_help(tree->left);
+	if (left != -1)
+		right = binary_tree_is_perfect_help(tree->right);
+
+	if (left == -1 || right == -1)
+		return (-1);
+
+	if (left == right)
+		return (left + 1);
+
+	return (-1);
 }
