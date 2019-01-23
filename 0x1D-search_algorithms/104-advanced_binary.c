@@ -56,9 +56,7 @@ int advanced_binary_help(int *array, size_t lo, size_t hi, int value)
 		return (-1);
 	if (array[lo] == value)
 		return (lo);
-	if (array[half] > value)
-		hi = half - 1;
-	else if (array[half] < value)
+	if (array[half] < value)
 		lo = half + 1;
 	else
 		hi = half;
