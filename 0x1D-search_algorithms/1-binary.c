@@ -55,10 +55,6 @@ int binary_search_help(int *array, size_t lo, size_t hi, int value)
 		return (-1);
 	if (array[half] == value)
 		return (half);
-	if (array[hi] == value)
-		return (hi);
-	if (array[lo] == value)
-		return (lo);
 	if (array[half] > value)
 		return (binary_search_help(array, lo, half - 1, value));
 	return (binary_search_help(array, half + 1, hi, value));
