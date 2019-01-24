@@ -39,8 +39,6 @@ int exponential_search_help(int *array, size_t lo,
 	{
 		if (hi > size - 1)
 			hi = size - 1;
-		if (array[hi] == value)
-			return (hi);
 		printf("Value found between indexes [%lu] and [%lu]\n", lo, hi);
 		return (binary_search_help(array, lo, hi, value));
 	}
