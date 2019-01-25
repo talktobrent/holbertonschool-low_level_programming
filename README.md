@@ -1,4 +1,5 @@
-# C Programming -- Holberton School 2018-2019
+# Low Level Programming -- Holberton School 2018-2019
+## C, Make, Static/Dynamic libraries
 ### A collection of projects introducing various low level programming skills, tools, and concepts
 - Concepts and themes are highlighted in directory names, and reflect a chronological progression
 - Each project follows instructions, main files, and structs given on the Holberton intranet site
