@@ -1,44 +1,63 @@
-# Readme
-Read 0x0d. Structures, struct (C programming language), Documentation: structures, 0x0d. typedef and structures, typedef.
+<h1>0x0D. C - Structures, typedef</h1>
+<p>At the end of this project, you are expected to be able to explain to anyone, <strong>without the help of Google</strong>:</p>
 
-Tip from Justin Marsh: Read more books! Programming in C Chapter 8, Working with Structures p163-189
+<h3>General</h3>
 
-(Advanced - not mandatory) Read The Lost Art of C Structure Packing
-
-## What you should learn from this project
-At the end of this project you are expected to be able to explain to anyone, without the help of Google:
-
-What are structures, when, why and how to use them
-
-How to use typedef
-
-## Requirements
-Allowed editors: vi, vim, emacs
-
-All your files will be compiled on Ubuntu 14.04 LTS
-
-Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
-
-All your files should end with a new line
-
-A README.md file, at the root of the folder of the project is mandatory
-
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-
-You are not allowed to use global variables
-
-No more than 5 functions per file
-
-The only C standard library functions allowed are malloc, free and exit. Any use of functions like printf, puts, calloc, realloc etc… is forbidden
-
-You are allowed to use _putchar
-
-You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
-
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-
-The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called dog.h
-
-Don’t forget to push your header file
-
-All your header files should be include guarded
+<ul>
+<li>What are structures, when, why and how to use them</li>
+<li>How to use <code>typedef</code></li>
+</ul>
+<h2>Tasks</h2>
+  <h3>
+    0. Django
+  </h3>
+<p>Define a new type <code>struct dog</code> with the following elements:</p>
+<ul>
+<li><code>name</code>, type = <code>char *</code></li>
+<li><code>age</code>, type = <code>float</code></li>
+<li><code>owner</code>, type = <code>char *</code></li>
+</ul>
+        <p>File: <code>dog.h</code></p>
+  <h3>
+    1. A dog is the only thing on earth that loves you more than you love yourself
+  </h3>
+  <p>Write a function that initialize a variable of type <code>struct dog</code></p>
+<ul>
+<li>Prototype: <code>void init_dog(struct dog *d, char *name, float age, char *owner);</code></li>
+</ul>
+        <p>File: <code>1-init_dog.c</code></p>
+  <h3>
+    2. A dog will teach you unconditional love. If you can have that in your life, things won&#39;t be too bad
+  </h3>
+  <p>Write a function that prints a <code>struct dog</code></p>
+<ul>
+<li>Prototype: <code>void print_dog(struct dog *d);</code></li>
+<li>Format: see example bellow</li>
+<li>You are allowed to use the standard library</li>
+<li>If an element of <code>d</code> is <code>NULL</code>, print <code>(nil)</code> instead of this element. (if <code>name</code> is <code>NULL</code>, print <code>Name: (nil)</code>)</li>
+<li>If <code>d</code> is <code>NULL</code> print nothing.</li>
+</ul>
+        <p>File: <code>2-print_dog.c</code></p>
+  <h3>
+    3. Outside of a dog, a book is a man&#39;s best friend. Inside of a dog it&#39;s too dark to read
+  </h3>
+  <p>Define a new type <code>dog_t</code> as a new name for the type <code>struct dog</code>.</p>
+        <p>File: <code>dog.h</code></p>
+  <h3>
+    4. A door is what a dog is perpetually on the wrong side of
+  </h3>
+  <p>Write a function that creates a new dog.</p>
+<ul>
+<li>Prototype: <code>dog_t *new_dog(char *name, float age, char *owner);</code></li>
+<li>You have to store a copy of <code>name</code> and <code>owner</code></li>
+<li>Return <code>NULL</code> if the function fails</li>
+</ul>
+        <p>File: <code>4-new_dog.c</code></p>
+  <h3>
+    5. How many legs does a dog have if you call his tail a leg? Four. Saying that a tail is a leg doesn&#39;t make it a leg
+  </h3>
+  <p>Write a function that frees dogs.</p>
+<ul>
+<li>Prototype: <code>void free_dog(dog_t *d);</code></li>
+</ul>
+        <p>File: <code>5-free_dog.c</code></p>

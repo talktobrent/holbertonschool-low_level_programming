@@ -1,42 +1,116 @@
-# Readme
-Read C - Pointer to Pointer, C – Pointer to Pointer with example, Multi-dimensional Arrays in C, Two dimensional (2D) arrays in C programming with example and read again pointers and arrays.
+<h1>0x06. C - Even more pointers, arrays and strings</h1>
+<p>At the end of this project, you are expected to be able to explain to anyone, <strong>without the help of Google</strong>:</p>
 
-You do not need to learn about pointers to functions, arrays of structures, malloc and free - yet.
+<h3>General</h3>
 
-## What you should learn from this project
-At the end of this project you are expected to be able to explain to anyone, without the help of Google:
-
-What are pointers to pointers and how to use them
-
-What are multidimensional arrays and how to use them
-
-What are the most common C standard library functions to manipulate strings
-
-## Requirements
-Allowed editors: vi, vim, emacs
-
-All your files will be compiled on Ubuntu 14.04 LTS
-
-Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
-
-All your files should end with a new line
-
-A README.md file, at the root of the folder of the project is mandatory
-
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-
-You are not allowed to use global variables
-
-No more than 5 functions per file
-
-You are not allowed to use the standard library. Any use of functions like printf, puts, etc… is forbidden
-
-You are allowed to use _putchar
-
-You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
-
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-
-The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called holberton.h
-
-Don’t forget to push your header file
+<ul>
+<li>What are pointers to pointers and how to use them</li>
+<li>What are multidimensional arrays and how to use them</li>
+<li>What are the most common C standard library functions to manipulate strings</li>
+</ul>
+<h2>Tasks</h2>
+  <h3>
+    0. memset
+  </h3>
+  <p>Write a function that fills memory with a constant byte.</p>
+<ul>
+<li>Prototype: <code>char *_memset(char *s, char b, unsigned int n);</code></li>
+<li>The <code>_memset()</code> function fills the first <code>n</code> bytes of the memory area pointed to by <code>s</code> with the constant byte <code>b</code></li>
+<li>Returns a pointer to the memory area <code>s</code></li>
+</ul>
+<p>FYI: The standard library provides a similar function: <code>memset</code>. Run <code>man memset</code> to learn more.</p>
+        <p>File: <code>0-memset.c</code></p>
+  <h3>
+    1. memcpy
+  </h3>
+  <p>Write a function that copies memory area.</p>
+<ul>
+<li>Prototype: <code>char *_memcpy(char *dest, char *src, unsigned int n);</code></li>
+<li>The <code>_memcpy()</code>  function  copies <code>n</code> bytes from memory area <code>src</code> to memory area <code>dest</code></li>
+<li>Returns a pointer to <code>dest</code></li>
+</ul>
+<p>FYI: The standard library provides a similar function: <code>memcpy</code>. Run <code>man memcpy</code> to learn more.</p>
+        <p>File: <code>1-memcpy.c</code></p>
+  <h3>
+    2. strchr
+  </h3>
+  <p>Write a function that locates a character in a string.</p>
+<ul>
+<li>Prototype: <code>char *_strchr(char *s, char c);</code></li>
+<li>Returns a pointer to the first occurrence of the character <code>c</code> in the string <code>s</code>, or <code>NULL</code> if the character is not  found</li>
+</ul>
+<p>FYI: The standard library provides a similar function: <code>strchr</code>. Run <code>man strchr</code> to learn more.</p>
+        <p>File: <code>2-strchr.c</code></p>
+  <h3>
+    3. strspn
+  </h3>
+  <p>Write a function that gets the length of a prefix substring.</p>
+<ul>
+<li>Prototype: <code>unsigned int _strspn(char *s, char *accept);</code></li>
+<li>Returns the number of bytes in the initial segment of <code>s</code> which consist only of bytes from <code>accept</code></li>
+</ul>
+<p>FYI: The standard library provides a similar function: <code>strspn</code>. Run <code>man strspn</code> to learn more.</p>
+        <p>File: <code>3-strspn.c</code></p>
+  <h3>
+    4. strpbrk
+  </h3>
+  <p>Write a function that searches a string for any of a set of bytes.</p>
+<ul>
+<li>Prototype: <code>char *_strpbrk(char *s, char *accept);</code></li>
+<li>The <code>_strpbrk()</code>  function locates the first occurrence in the string <code>s</code> of any of the bytes in the string <code>accept</code></li>
+<li>Returns a pointer to the byte in <code>s</code> that matches one of the bytes in <code>accept</code>,  or <code>NULL</code> if no such byte is found</li>
+</ul>
+<p>FYI: The standard library provides a similar function: <code>strpbrk</code>. Run <code>man strpbrk</code> to learn more.</p>
+        <p>File: <code>4-strpbrk.c</code></p>
+  <h3>
+    5. strstr
+  </h3>
+  <p>Write a function that locates a substring.</p>
+<ul>
+<li>Prototype: <code>char *_strstr(char *haystack, char *needle);</code></li>
+<li>The <code>_strstr()</code> function finds the first occurrence of the substring <code>needle</code> in the string <code>haystack</code>.  The terminating null bytes (<code>\0</code>) are not compared</li>
+<li>Returns a pointer to the beginning of the located substring, or <code>NULL</code> if the substring is not found.</li>
+</ul>
+<p>FYI: The standard library provides a similar function: <code>strstr</code>. Run <code>man strstr</code> to learn more.</p>
+        <p>File: <code>5-strstr.c</code></p>
+  <h3>
+    6. Chess is mental torture
+  </h3>
+  <p>Write a function that prints the chessboard.</p>
+<ul>
+<li>Prototype: <code>void print_chessboard(char (*a)[8]);</code></li>
+</ul>
+        <p>File: <code>7-print_chessboard.c</code></p>
+  <h3>
+    7. The line of life is a ragged diagonal between duty and desire
+  </h3>
+  <p>Write a function that prints the sum of the two diagonals of a square matrix of integers.</p>
+<ul>
+<li>Prototype: <code>void print_diagsums(int *a, int size);</code></li>
+<li>Format: see example</li>
+<li>You are allowed to use the standard library</li>
+</ul>
+<p>Note that in the following example we are casting an <code>int[][]</code> into an <code>int*</code>. This is not something you should do. The goal here is to make sure you understand how an array of array is stored in memory.</p>
+        <p>File: <code>8-print_diagsums.c</code></p>
+  <h3>
+    8. Double pointer, double fun
+  </h3>
+  <p>Write a function that sets the value of a pointer to a char.</p>
+<ul>
+<li>Prototype: <code>void set_string(char **s, char *to);</code></li>
+</ul>
+<ul>
+<li>Anne Cognet - Cohort 1, San Francisco</li>
+<li>Asaia Palacios - Cohort 0, San Francisco</li>
+</ul>
+        <p>File: <code>9-set_string.c</code></p>
+  <h3>
+    9. My primary goal of hacking was the intellectual curiosity, the seduction of adventure
+  </h3>
+  <p>Create a file that contains the password for the crackme2  executable.</p>
+<ul>
+<li>Your file should contain the exact password, no new line, no extra space</li>
+<li><code>ltrace</code>, <code>ldd</code>, <code>gdb</code> and <code>objdump</code> can help</li>
+<li>You may need to install the <code>openssl</code> library to run the <code>crakme2</code> program: <code>sudo apt-get install libssl-dev</code> </li>
+</ul>
+        <p>File: <code>101-crackme_password</code></p>

@@ -1,56 +1,35 @@
-# Readme
-Read or watch What Is A “C” Library? What Is It Good For?, Creating A Static “C” Library Using “ar” and “ranlib”, Using A “C” Library In A Program , What is difference between Dynamic and Static library(Static and Dynamic linking) (stop at 4:44) and C static libraries.
+<h1>0x08. C - Static libraries</h1>
+<p>At the end of this project, you are expected to be able to explain to anyone, <strong>without the help of Google</strong>:</p>
 
-man ar, ranlib, nm.
+<h3>General</h3>
 
-You do not need to learn about dynamic libraries, yet.
-
-## What you should learn from this project
-
-At the end of this project you are expected to be able to explain to anyone, without the help of Google:
-
-What is a static library, how does it work, how to create one, and how to use it
-
-Basic usage of ar, ranlib, nm
-
-## Requirements
-Allowed editors: vi, vim, emacs
-
-All your files will be compiled on Ubuntu 14.04 LTS
-
-Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
-
-All your files should end with a new line
-
-A README.md file, at the root of the folder of the project is mandatory
-
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-
-You are not allowed to use global variables
-
-No more than 5 functions per file
-
-You are not allowed to use the standard library. Any use of functions like printf, puts, etc… is forbidden
-
-You are allowed to use _putchar
-
-You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
-
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-
-The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called holberton.h
-
-Don’t forget to push your header file
-
-## Requirements (Bash)
-Allowed editors: vi, vim, emacs
-
-All your scripts will be tested on Ubuntu 14.04 LTS
-
-All your files should end with a new line (why?)
-
-The first line of all your files should be exactly #!/bin/bash
-
-A README.md file, at the root of the folder of the project, describing what each script is doing
-
-All your files must be executable
+<ul>
+<li>What is a static library, how does it work, how to create one, and how to use it</li>
+<li>Basic usage of <code>ar</code>, <code>ranlib</code>, <code>nm</code></li>
+</ul>
+<h2>Tasks</h2>
+  <h3>
+    0. A library is not a luxury but one of the necessities of life 
+  </h3>
+  <p>Create the static library <code>libholberton.a</code> containing all the functions listed below:</p>
+<p>If you haven&rsquo;t coded all of the above functions create empty ones with the right prototype.
+Don&rsquo;t forget to push your <code>holberton.h</code> file to your repository. It should at least contain all the prototypes of the above functions.</p>
+        <p>File: <code>libholberton.a, holberton.h</code></p>
+  <h3>
+    1. Without libraries what have we? We have no past and no future
+  </h3>
+  <p>Create a script called <code>create_static_lib.sh</code> that creates a static library called <code>liball.a</code> from all the <code>.c</code> files that are in the current directory.</p>
+        <p>File: <code>create_static_lib.sh</code></p>
+  <h3>
+    2. Either write something worth reading or do something worth writing
+  </h3>
+  <p>Write a blog post on C static libraries. It should cover:</p>
+<ul>
+<li>Why use libraries</li>
+<li>How they work</li>
+<li>How to create them</li>
+<li>How to use them</li>
+</ul>
+<p>Your posts should have examples and at least one picture, at the top. Publish your blog post on Medium or LinkedIn, and share it at least on Twitter and LinkedIn.</p>
+<p>When done, please add all urls below (blog post, tweet, etc.)</p>
+<p>Please, remember that these blogs must be written in English to further your technical ability in a variety of settings</p>

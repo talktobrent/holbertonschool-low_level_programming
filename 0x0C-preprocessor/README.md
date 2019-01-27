@@ -1,44 +1,39 @@
-# Readme
-Read Understanding C program Compilation Process, Object-like Macros, Macro Arguments, Pre Processor Directives in C, The C Preprocessor, Standard Predefined Macros, and include guard.
+<h1>0x0C. C - Preprocessor</h1>
+<p>At the end of this project, you are expected to be able to explain to anyone, <strong>without the help of Google</strong>:</p>
 
-Read quickly through Common Predefined Macros
+<h3>General</h3>
 
-## What you should learn from this project
-At the end of this project you are expected to be able to explain to anyone, without the help of Google:
-
-What are macros and how to use them
-
-What are the most common predefined macros
-
-How to include guard your header files
-
-## Requirements
-Allowed editors: vi, vim, emacs
-
-All your files will be compiled on Ubuntu 14.04 LTS
-
-Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
-
-All your files should end with a new line
-
-A README.md file, at the root of the folder of the project is mandatory
-
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-
-You are not allowed to use global variables
-
-No more than 5 functions per file
-
-The only C standard library functions allowed are malloc, free and exit. Any use of functions like printf, puts, calloc, realloc etc… is forbidden
-
-You are allowed to use _putchar
-
-You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
-
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-
-The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called holberton.h
-
-Don’t forget to push your header file
-
-All your header files should be include guarded
+<ul>
+<li>What are macros and how to use them</li>
+<li>What are the most common predefined macros</li>
+<li>How to include guard your header files</li>
+</ul>
+<h2>Tasks</h2>
+  <h3>
+    0. Object-like Macro
+  </h3>
+  <p>Create a header file that defines a macro named <code>SIZE</code> as an abbreviation for the token <code>1024</code>.</p>
+        <p>File: <code>0-object_like_macro.h</code></p>
+  <h3>
+    1. Pi
+  </h3>
+  <p>Create a header file that defines a macro named <code>PI</code> as an abbreviation for the token <code>3.14159265359</code>.</p>
+        <p>File: <code>1-pi.h</code></p>
+  <h3>
+    2. File name
+  </h3>
+  <p>Write a program that prints the name of the file it was compiled from, followed by a new line.</p>
+<ul>
+<li>You are allowed to use the standard library</li>
+</ul>
+        <p>File: <code>2-main.c</code></p>
+  <h3>
+    3. Function-like macro
+  </h3>
+  <p>Write a function-like macro <code>ABS(x)</code> that computes the absolute value of a number <code>x</code>.</p>
+        <p>File: <code>3-function_like_macro.h</code></p>
+  <h3>
+    4. SUM
+  </h3>
+  <p>Write a function-like macro <code>SUM(x, y)</code> that computes the sum of the numbers <code>x</code> and <code>y</code>.</p>
+        <p>File: <code>4-sum.h</code></p>
