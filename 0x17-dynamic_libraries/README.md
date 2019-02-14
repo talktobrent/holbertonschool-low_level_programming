@@ -36,8 +36,6 @@ Don&rsquo;t forget to push your <code>holberton.h</code> file in your repository
 </ul>
 <p>Your posts should have examples and at least one picture, at the top.
 Publish your blog post on Medium or LinkedIn, and share it at least on Twitter and LinkedIn.</p>
-<p>When done, please add all urls below (blog post, tweet, etc.)</p>
-<p>Please, remember that these blogs must be written in English to further your technical ability in a variety of settings</p>
   <h3>
     3. Let&#39;s call C functions from Python
   </h3>
@@ -65,5 +63,4 @@ Publish your blog post on Medium or LinkedIn, and share it at least on Twitter a
 <li>MSS always exit after running the program <code>gm</code></li>
 <li>TL;DR; This is what is going to happen</li>
 </ul>
-<p>Tip: <code>LD_PRELOAD</code></p>
         <p>File: <code>101-make_me_win.sh</code></p>

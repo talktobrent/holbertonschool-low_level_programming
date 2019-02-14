@@ -101,5 +101,3 @@
 <li>Publish your blog post on Medium or LinkedIn</li>
 <li>Share your blog post at least on Twitter and LinkedIn</li>
 </ul>
-<p>When done, please add all urls below (blog post, tweet, etc.)</p>
-<p>Please, remember that these blogs must be written in English to further your technical ability in a variety of settings</p>

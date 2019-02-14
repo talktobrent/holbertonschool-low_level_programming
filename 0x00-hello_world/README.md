@@ -4,7 +4,6 @@
 <h3>General</h3>
 
 <ul>
-<li>Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))</li>
 <li>Who invented C</li>
 <li>Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds</li>
 <li>What happens when you type <code>gcc main.c</code></li>
@@ -101,9 +100,7 @@
 <li>Have at least one picture, at the top of the blog post</li>
 <li>Publish your blog post on Medium or LinkedIn</li>
 <li>Share your blog post at least on Twitter and LinkedIn</li>
-<li>Please, remember that these blogs must be written in English to further your technical ability in a variety of settings</li>
 </ul>
-<p>When done, please add all urls below (blog post, tweet, etc.)</p>
   <h3>
     8. Intel
   </h3>
